@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotis Vasilopoulos - Portfolio</title>
+  <style>
+    /* ===== Reset & Body ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', Helvetica, sans-serif;
+      line-height: 1.6;
+      background-color: #f0f4f8; /* Ανοιχτό background */
+      color: #333;
+      min-height: 100vh;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background: linear-gradient(135deg, #4A90E2, #50E3C2); /* Μπλε-Τιρκουάζ gradient */
+      color: white;
+      padding: 4rem 1rem;
+      text-align: center;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* ===== Projects Section ===== */
+    #projects {
+      padding: 4rem 1rem;
+    }
+
+    #projects h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #4A90E2;
+      font-size: 2.2rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+
+    /* ===== Project Cards with Fade-in ===== */
+    .project {
+      background-color: #FFFFFF;
+      padding: 2rem 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      /* Fade-in defaults */
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+    }
+
+    .project:nth-child(1) { animation-delay: 0.2s; }
+    .project:nth-child(2) { animation-delay: 0.4s; }
+    .project:nth-child(3) { animation-delay: 0.6s; }
+
+    .project:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+
+    .project h3 {
+      color: #4A90E2;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .project p {
+      flex-grow: 1;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .project a {
+      color: #50E3C2;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s ease;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+      color: #4A90E2;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background-color: #34495E; /* Σκούρο μπλε-γκρι */
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    footer h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    footer p {
+      margin-bottom: 1rem;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer ul li {
+      margin: 0.5rem 0;
+    }
+
+    footer a {
+      color: #50E3C2;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: #4A90E2;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1rem; }
+      #projects h2 { font-size: 1.8rem; }
+      .project h3 { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Fotis Vasilopoulos</h1>
+    <p>Junior developer — learning HTML, CSS, and C. Building my first projects and improving every day.</p>
+  </header>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+      <div class="project">
+        <h3>Project 1: Weather App</h3>
+        <p>A simple weather app that fetches data from an API. (Demo link: <a href="#">click here</a>)</p>
+      </div>
+      <div class="project">
+        <h3>Project 2: Portfolio Website</h3>
+        <p>This website itself as a project, built with HTML and CSS.</p>
+      </div>
+      <div class="project">
+        <h3>Project 3: To-Do List</h3>
+        <p>A simple to-do list app for tracking daily tasks. (Demo link: <a href="#">click here</a>)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <h2>Contact</h2>
+    <p>Find me:</p>
+    <ul>
+      <li>Email: <a href="mailto:vasilopoulos.fotis320@gmail.com">vasilopoulos.fotis320@gmail.com</a></li>
+      <li><a href="https://github.com/Fotisvas" target="_blank" title="Visit my GitHub profile">GitHub</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
